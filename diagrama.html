@@ -93,6 +93,11 @@
         details > summary::-webkit-details-marker {
             display: none;
         }
+
+        /* FAQ Icon Rotation */
+        details[open] summary .fa-chevron-down {
+            transform: rotate(180deg);
+        }
     </style>
 </head>
 <body class="antialiased selection:bg-ibero selection:text-white" x-data="{ mobileMenuOpen: false }">
@@ -274,7 +279,7 @@
 
                 <div class="relative pl-8 md:pl-0">
                     <!-- Line -->
-                    <div class="absolute left-4 md:left-1/2 top-0 h-full w-0.5 bg-gray-100 md:-translate-x-1/2"></div>
+                    <div class="absolute left-[15px] md:left-1/2 top-0 h-full w-0.5 bg-gray-100 md:-translate-x-1/2"></div>
 
                     <div class="space-y-8">
                         <!-- Step 1 -->
@@ -333,8 +338,8 @@
                     <details class="group bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden">
                         <summary class="flex justify-between items-center p-4 cursor-pointer hover:bg-gray-50/50 transition-colors">
                             <span class="font-semibold text-gray-800">¿En qué consiste la campaña?</span>
-                            <span class="text-gray-400 group-open:rotate-180 transition-transform duration-200">
-                                <i class="fas fa-chevron-down"></i>
+                            <span class="text-gray-400 transition-transform duration-200">
+                                <i class="fas fa-chevron-down transition-transform duration-200"></i>
                             </span>
                         </summary>
                         <div class="px-4 pb-4 pt-0 text-gray-600 text-sm leading-relaxed">
@@ -346,8 +351,8 @@
                     <details class="group bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden">
                         <summary class="flex justify-between items-center p-4 cursor-pointer hover:bg-gray-50/50 transition-colors">
                             <span class="font-semibold text-gray-800">¿Por qué es necesario eliminar cursos antiguos?</span>
-                            <span class="text-gray-400 group-open:rotate-180 transition-transform duration-200">
-                                <i class="fas fa-chevron-down"></i>
+                            <span class="text-gray-400 transition-transform duration-200">
+                                <i class="fas fa-chevron-down transition-transform duration-200"></i>
                             </span>
                         </summary>
                         <div class="px-4 pb-4 pt-0 text-gray-600 text-sm leading-relaxed">
@@ -359,8 +364,8 @@
                     <details class="group bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden">
                         <summary class="flex justify-between items-center p-4 cursor-pointer hover:bg-gray-50/50 transition-colors">
                             <span class="font-semibold text-gray-800">¿A quién aplica esta medida?</span>
-                            <span class="text-gray-400 group-open:rotate-180 transition-transform duration-200">
-                                <i class="fas fa-chevron-down"></i>
+                            <span class="text-gray-400 transition-transform duration-200">
+                                <i class="fas fa-chevron-down transition-transform duration-200"></i>
                             </span>
                         </summary>
                         <div class="px-4 pb-4 pt-0 text-gray-600 text-sm leading-relaxed">
@@ -372,8 +377,8 @@
                     <details class="group bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden">
                         <summary class="flex justify-between items-center p-4 cursor-pointer hover:bg-gray-50/50 transition-colors">
                             <span class="font-semibold text-gray-800">¿Qué cursos permanecerán en la plataforma?</span>
-                            <span class="text-gray-400 group-open:rotate-180 transition-transform duration-200">
-                                <i class="fas fa-chevron-down"></i>
+                            <span class="text-gray-400 transition-transform duration-200">
+                                <i class="fas fa-chevron-down transition-transform duration-200"></i>
                             </span>
                         </summary>
                         <div class="px-4 pb-4 pt-0 text-gray-600 text-sm leading-relaxed">
@@ -385,8 +390,8 @@
                     <details class="group bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden">
                         <summary class="flex justify-between items-center p-4 cursor-pointer hover:bg-gray-50/50 transition-colors">
                             <span class="font-semibold text-gray-800">¿Qué cursos serán eliminados?</span>
-                            <span class="text-gray-400 group-open:rotate-180 transition-transform duration-200">
-                                <i class="fas fa-chevron-down"></i>
+                            <span class="text-gray-400 transition-transform duration-200">
+                                <i class="fas fa-chevron-down transition-transform duration-200"></i>
                             </span>
                         </summary>
                         <div class="px-4 pb-4 pt-0 text-gray-600 text-sm leading-relaxed">
@@ -398,8 +403,8 @@
                     <details class="group bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden">
                         <summary class="flex justify-between items-center p-4 cursor-pointer hover:bg-gray-50/50 transition-colors">
                             <span class="font-semibold text-gray-800">¿Si olvido respaldar, puedo recuperar mi información?</span>
-                            <span class="text-gray-400 group-open:rotate-180 transition-transform duration-200">
-                                <i class="fas fa-chevron-down"></i>
+                            <span class="text-gray-400 transition-transform duration-200">
+                                <i class="fas fa-chevron-down transition-transform duration-200"></i>
                             </span>
                         </summary>
                         <div class="px-4 pb-4 pt-0 text-gray-600 text-sm leading-relaxed">
