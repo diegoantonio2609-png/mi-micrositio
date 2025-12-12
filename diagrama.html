@@ -133,6 +133,11 @@
             -webkit-text-fill-color: transparent;
         }
 
+        /* Scroll Offset for fixed header */
+        #criterios, #recursos, #cronograma, #faq, #soporte {
+            scroll-margin-top: 100px;
+        }
+
         /* Custom Scrollbar */
         ::-webkit-scrollbar {
             width: 8px;
@@ -167,8 +172,8 @@
                 <!-- Desktop Menu -->
                 <nav class="hidden md:flex space-x-1 items-center">
                     <a href="#criterios" class="px-4 py-2 text-sm font-medium text-slate-600 hover:text-ibero rounded-full hover:bg-slate-50 transition-all">Criterios</a>
-                    <a href="#recursos" class="px-4 py-2 text-sm font-medium text-slate-600 hover:text-ibero rounded-full hover:bg-slate-50 transition-all">Recursos</a>
                     <a href="#cronograma" class="px-4 py-2 text-sm font-medium text-slate-600 hover:text-ibero rounded-full hover:bg-slate-50 transition-all">Cronograma</a>
+                    <a href="#recursos" class="px-4 py-2 text-sm font-medium text-slate-600 hover:text-ibero rounded-full hover:bg-slate-50 transition-all">Recursos</a>
                     <a href="#faq" class="px-4 py-2 text-sm font-medium text-slate-600 hover:text-ibero rounded-full hover:bg-slate-50 transition-all">Preguntas</a>
                     <a href="#soporte" class="ml-4 px-5 py-2.5 bg-slate-900 text-white text-sm font-medium rounded-full hover:bg-slate-800 transition-all shadow-lg shadow-slate-200">Soporte</a>
                 </nav>
@@ -191,8 +196,8 @@
              class="md:hidden bg-white/95 backdrop-blur-md border-t border-slate-100 absolute w-full shadow-lg">
             <nav class="px-4 pt-2 pb-6 space-y-1">
                 <a href="#criterios" @click="mobileMenuOpen = false" class="block px-4 py-3 rounded-lg text-base font-medium text-slate-700 hover:text-ibero hover:bg-slate-50">Criterios</a>
-                <a href="#recursos" @click="mobileMenuOpen = false" class="block px-4 py-3 rounded-lg text-base font-medium text-slate-700 hover:text-ibero hover:bg-slate-50">Recursos</a>
                 <a href="#cronograma" @click="mobileMenuOpen = false" class="block px-4 py-3 rounded-lg text-base font-medium text-slate-700 hover:text-ibero hover:bg-slate-50">Cronograma</a>
+                <a href="#recursos" @click="mobileMenuOpen = false" class="block px-4 py-3 rounded-lg text-base font-medium text-slate-700 hover:text-ibero hover:bg-slate-50">Recursos</a>
                 <a href="#faq" @click="mobileMenuOpen = false" class="block px-4 py-3 rounded-lg text-base font-medium text-slate-700 hover:text-ibero hover:bg-slate-50">Preguntas Frecuentes</a>
             </nav>
         </div>
@@ -468,7 +473,7 @@
         </section>
 
         <!-- 5. FAQ -->
-        <section id="faq" class="py-12 bg-slate-50">
+        <section id="faq" class="py-12 bg-slate-50 my-8">
             <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-8">
                     <h2 class="text-3xl font-bold text-slate-900">Preguntas Frecuentes</h2>
