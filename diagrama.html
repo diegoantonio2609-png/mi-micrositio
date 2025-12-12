@@ -154,20 +154,20 @@
         }
     </style>
 </head>
-<body x-data="{ mobileMenuOpen: false }">
+<body x-data="{ mobileMenuOpen: false, showBackToTop: false }" @scroll.window="showBackToTop = (window.pageYOffset > 300)">
 
     <!-- HEADER / NAV -->
     <header class="fixed top-0 w-full z-50 glass transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 <!-- Logo -->
-                <div class="flex-shrink-0 flex items-center gap-3">
+                <a href="#" class="flex-shrink-0 flex items-center gap-3 hover:opacity-80 transition-opacity decoration-0">
                     <div class="w-10 h-10 bg-ibero text-white font-bold flex items-center justify-center rounded-lg shadow-glow">I</div>
                     <div class="flex flex-col">
                         <span class="font-bold text-lg leading-tight text-slate-800 tracking-tight">Ibero León</span>
                         <span class="text-xs font-medium text-slate-500 uppercase tracking-wider">Aprendizaje Digital</span>
                     </div>
-                </div>
+                </a>
 
                 <!-- Desktop Menu -->
                 <nav class="hidden md:flex space-x-1 items-center">
@@ -271,65 +271,68 @@
         <!-- 2. CRITERIOS (Table) -->
         <section id="criterios" class="py-12 bg-white relative">
             <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-8">
-                    <h2 class="text-3xl font-bold text-slate-900 mb-2">Criterios de Depuración</h2>
-                    <p class="text-slate-600 max-w-2xl mx-auto">
-                        Conservaremos únicamente el año en curso y los dos anteriores completos para optimizar la capacidad de alojamiento.
-                    </p>
-                </div>
+                <!-- Wrapper Task 1 -->
+                <div class="glass-card rounded-2xl p-8 sm:p-12 shadow-soft">
+                    <div class="text-center mb-8">
+                        <h2 class="text-3xl font-bold text-slate-900 mb-2">Criterios de Depuración</h2>
+                        <p class="text-slate-600 max-w-2xl mx-auto">
+                            Conservaremos únicamente el año en curso y los dos anteriores completos para optimizar la capacidad de alojamiento.
+                        </p>
+                    </div>
 
-                <!-- Tabla Estilizada -->
-                <div class="glass-card rounded-2xl overflow-hidden mb-5">
-                    <div class="overflow-x-auto">
-                        <table class="w-full text-left border-collapse">
-                            <thead>
-                                <tr class="bg-slate-50 border-b border-slate-100">
-                                    <th class="py-5 px-6 text-xs font-bold text-slate-500 uppercase tracking-wider">Ciclo Académico</th>
-                                    <th class="py-5 px-6 text-xs font-bold text-slate-500 uppercase tracking-wider">Estado</th>
-                                    <th class="py-5 px-6 text-xs font-bold text-slate-500 uppercase tracking-wider">Criterio</th>
-                                </tr>
-                            </thead>
-                            <tbody class="divide-y divide-slate-100">
-                                <tr class="group hover:bg-slate-50/50 transition-colors">
-                                    <td class="py-5 px-6">
-                                        <span class="block font-bold text-slate-800">2026</span>
-                                        <span class="text-xs text-slate-500">Ciclo Actual</span>
-                                    </td>
-                                    <td class="py-5 px-6">
-                                        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-emerald-100 text-emerald-800">
-                                            Activo
-                                        </span>
-                                    </td>
-                                    <td class="py-5 px-6 text-sm text-slate-600">Permanece activo en plataforma.</td>
-                                </tr>
-                                <tr class="group hover:bg-slate-50/50 transition-colors">
-                                    <td class="py-5 px-6">
-                                        <span class="block font-bold text-slate-800">2024 - 2025</span>
-                                        <span class="text-xs text-slate-500">Inmediatos Anteriores</span>
-                                    </td>
-                                    <td class="py-5 px-6">
-                                        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-emerald-100 text-emerald-800">
-                                            Activo
-                                        </span>
-                                    </td>
-                                    <td class="py-5 px-6 text-sm text-slate-600">Permanece activo en plataforma.</td>
-                                </tr>
-                                <tr class="group bg-red-50/30 hover:bg-red-50/50 transition-colors">
-                                    <td class="py-5 px-6">
-                                        <span class="block font-bold text-ibero">2023 y anteriores</span>
-                                        <span class="text-xs text-red-400">Antigüedad Mayor</span>
-                                    </td>
-                                    <td class="py-5 px-6">
-                                        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800">
-                                            A Depurar
-                                        </span>
-                                    </td>
-                                    <td class="py-5 px-6 text-sm text-slate-600 font-medium">
-                                        <i class="fas fa-exclamation-circle text-ibero mr-1"></i> Eliminación definitiva. Requiere respaldo.
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+                    <!-- Tabla Estilizada -->
+                    <div class="rounded-xl overflow-hidden mb-5 border border-slate-100">
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left border-collapse">
+                                <thead>
+                                    <tr class="bg-slate-50 border-b border-slate-100">
+                                        <th class="py-5 px-6 text-xs font-bold text-slate-500 uppercase tracking-wider">Ciclo Académico</th>
+                                        <th class="py-5 px-6 text-xs font-bold text-slate-500 uppercase tracking-wider">Estado</th>
+                                        <th class="py-5 px-6 text-xs font-bold text-slate-500 uppercase tracking-wider">Criterio</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-slate-100">
+                                    <tr class="group hover:bg-slate-50/50 transition-colors">
+                                        <td class="py-5 px-6">
+                                            <span class="block font-bold text-slate-800">2026</span>
+                                            <span class="text-xs text-slate-500">Ciclo Actual</span>
+                                        </td>
+                                        <td class="py-5 px-6">
+                                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-emerald-100 text-emerald-800">
+                                                Activo
+                                            </span>
+                                        </td>
+                                        <td class="py-5 px-6 text-sm text-slate-600">Permanece activo en plataforma.</td>
+                                    </tr>
+                                    <tr class="group hover:bg-slate-50/50 transition-colors">
+                                        <td class="py-5 px-6">
+                                            <span class="block font-bold text-slate-800">2024 - 2025</span>
+                                            <span class="text-xs text-slate-500">Inmediatos Anteriores</span>
+                                        </td>
+                                        <td class="py-5 px-6">
+                                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-emerald-100 text-emerald-800">
+                                                Activo
+                                            </span>
+                                        </td>
+                                        <td class="py-5 px-6 text-sm text-slate-600">Permanece activo en plataforma.</td>
+                                    </tr>
+                                    <tr class="group bg-red-50/30 hover:bg-red-50/50 transition-colors">
+                                        <td class="py-5 px-6">
+                                            <span class="block font-bold text-ibero">2023 y anteriores</span>
+                                            <span class="text-xs text-red-400">Antigüedad Mayor</span>
+                                        </td>
+                                        <td class="py-5 px-6">
+                                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800">
+                                                A Depurar
+                                            </span>
+                                        </td>
+                                        <td class="py-5 px-6 text-sm text-slate-600 font-medium">
+                                            <i class="fas fa-exclamation-circle text-ibero mr-1"></i> Eliminación definitiva. Requiere respaldo.
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -574,6 +577,20 @@
             </div>
         </div>
     </footer>
+
+    <!-- Back to Top Button -->
+    <button x-show="showBackToTop"
+            @click="window.scrollTo({top: 0, behavior: 'smooth'})"
+            x-transition:enter="transition ease-out duration-300"
+            x-transition:enter-start="opacity-0 translate-y-4"
+            x-transition:enter-end="opacity-100 translate-y-0"
+            x-transition:leave="transition ease-in duration-300"
+            x-transition:leave-start="opacity-100 translate-y-0"
+            x-transition:leave-end="opacity-0 translate-y-4"
+            class="fixed bottom-5 right-5 w-12 h-12 bg-ibero text-white rounded-full shadow-lg flex items-center justify-center hover:bg-ibero-dark focus:outline-none z-50 cursor-pointer"
+            style="display: none;">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
 </body>
 </html>
