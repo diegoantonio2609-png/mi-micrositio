@@ -167,8 +167,8 @@
                 <!-- Desktop Menu -->
                 <nav class="hidden md:flex space-x-1 items-center">
                     <a href="#criterios" class="px-4 py-2 text-sm font-medium text-slate-600 hover:text-ibero rounded-full hover:bg-slate-50 transition-all">Criterios</a>
-                    <a href="#recursos" class="px-4 py-2 text-sm font-medium text-slate-600 hover:text-ibero rounded-full hover:bg-slate-50 transition-all">Recursos</a>
                     <a href="#cronograma" class="px-4 py-2 text-sm font-medium text-slate-600 hover:text-ibero rounded-full hover:bg-slate-50 transition-all">Cronograma</a>
+                    <a href="#recursos" class="px-4 py-2 text-sm font-medium text-slate-600 hover:text-ibero rounded-full hover:bg-slate-50 transition-all">Recursos</a>
                     <a href="#faq" class="px-4 py-2 text-sm font-medium text-slate-600 hover:text-ibero rounded-full hover:bg-slate-50 transition-all">Preguntas</a>
                     <a href="#soporte" class="ml-4 px-5 py-2.5 bg-slate-900 text-white text-sm font-medium rounded-full hover:bg-slate-800 transition-all shadow-lg shadow-slate-200">Soporte</a>
                 </nav>
@@ -191,8 +191,8 @@
              class="md:hidden bg-white/95 backdrop-blur-md border-t border-slate-100 absolute w-full shadow-lg">
             <nav class="px-4 pt-2 pb-6 space-y-1">
                 <a href="#criterios" @click="mobileMenuOpen = false" class="block px-4 py-3 rounded-lg text-base font-medium text-slate-700 hover:text-ibero hover:bg-slate-50">Criterios</a>
-                <a href="#recursos" @click="mobileMenuOpen = false" class="block px-4 py-3 rounded-lg text-base font-medium text-slate-700 hover:text-ibero hover:bg-slate-50">Recursos</a>
                 <a href="#cronograma" @click="mobileMenuOpen = false" class="block px-4 py-3 rounded-lg text-base font-medium text-slate-700 hover:text-ibero hover:bg-slate-50">Cronograma</a>
+                <a href="#recursos" @click="mobileMenuOpen = false" class="block px-4 py-3 rounded-lg text-base font-medium text-slate-700 hover:text-ibero hover:bg-slate-50">Recursos</a>
                 <a href="#faq" @click="mobileMenuOpen = false" class="block px-4 py-3 rounded-lg text-base font-medium text-slate-700 hover:text-ibero hover:bg-slate-50">Preguntas Frecuentes</a>
             </nav>
         </div>
@@ -200,27 +200,27 @@
 
     <main>
         <!-- 1. HERO SECTION -->
-        <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+        <section class="relative pt-16 pb-10 lg:pt-24 lg:pb-16 overflow-hidden">
             <!-- Background Elements -->
             <div class="absolute top-0 inset-x-0 h-full bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-slate-100 via-white to-white -z-10"></div>
             <div class="absolute top-20 right-0 w-[500px] h-[500px] bg-ibero/5 rounded-full blur-3xl -z-10 animate-float"></div>
             <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-slate-200/40 rounded-full blur-3xl -z-10"></div>
 
             <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-50 text-ibero text-xs font-bold uppercase tracking-wide mb-8 border border-red-100">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-50 text-ibero text-xs font-bold uppercase tracking-wide mb-4 border border-red-100">
                     <span class="w-2 h-2 rounded-full bg-ibero animate-pulse"></span>
                     Ciclo 2026
                 </div>
 
-                <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-slate-900 leading-tight mb-6 tracking-tight text-balance">
+                <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-slate-900 leading-tight mb-3 tracking-tight text-balance">
                     Campaña de Depuración de <span class="text-ibero">Entornos Virtuales</span>
                 </h1>
 
-                <p class="text-lg sm:text-xl text-slate-600 mb-10 max-w-2xl mx-auto leading-relaxed text-balance font-light">
+                <p class="text-lg sm:text-xl text-slate-600 mb-5 max-w-2xl mx-auto leading-relaxed text-balance font-light">
                     Optimizamos la capacidad de alojamiento de las aulas virtuales. Resguarda tu archivo personal para una plataforma sostenible.
                 </p>
 
-                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
                     <a href="#recursos" class="w-full sm:w-auto px-8 py-4 bg-ibero text-white font-semibold rounded-full hover:bg-ibero-dark transition-all transform hover:-translate-y-1 shadow-lg shadow-ibero/25 flex items-center justify-center gap-2">
                         Ver Guías de Respaldo <i class="fas fa-arrow-right text-sm"></i>
                     </a>
@@ -251,17 +251,17 @@
         </section>
 
         <!-- 2. CRITERIOS (Table) -->
-        <section id="criterios" class="py-24 bg-white relative">
+        <section id="criterios" class="py-12 bg-white relative">
             <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-16">
-                    <h2 class="text-3xl font-bold text-slate-900 mb-4">Criterios de Depuración</h2>
+                <div class="text-center mb-8">
+                    <h2 class="text-3xl font-bold text-slate-900 mb-2">Criterios de Depuración</h2>
                     <p class="text-slate-600 max-w-2xl mx-auto">
                         Conservaremos únicamente el año en curso y los dos anteriores completos para optimizar la capacidad de alojamiento.
                     </p>
                 </div>
 
                 <!-- Tabla Estilizada -->
-                <div class="glass-card rounded-2xl overflow-hidden mb-10">
+                <div class="glass-card rounded-2xl overflow-hidden mb-5">
                     <div class="overflow-x-auto">
                         <table class="w-full text-left border-collapse">
                             <thead>
@@ -317,75 +317,21 @@
             </div>
         </section>
 
-        <!-- 3. RECURSOS (Grid) -->
-        <section id="recursos" class="py-24 bg-slate-50 border-y border-slate-200">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
-                    <div class="max-w-2xl">
-                        <h2 class="text-3xl font-bold text-slate-900 mb-4">Recursos de Apoyo</h2>
-                        <p class="text-slate-600 text-lg">Guías paso a paso para identificar y respaldar tu información de manera segura.</p>
-                    </div>
-                    <a href="https://moodle.iberoleon.mx" target="_blank" class="inline-flex items-center font-semibold text-ibero hover:text-ibero-dark transition-colors">
-                        Ir a Moodle <i class="fas fa-external-link-alt ml-2 text-sm"></i>
-                    </a>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <!-- Card 1 -->
-                    <article class="glass-card rounded-2xl p-8 h-full flex flex-col group">
-                        <div class="w-14 h-14 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
-                            <i class="fas fa-search"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-slate-900 mb-3">Identificación de Cursos</h3>
-                        <p class="text-slate-600 mb-8 flex-grow leading-relaxed">
-                            Aprende a filtrar tus entornos virtuales en el tablero de Moodle para identificar con certeza cuáles corresponden a periodos anteriores a 2024.
-                        </p>
-                        <div class="flex gap-3">
-                            <button class="flex-1 py-3 px-4 bg-slate-900 text-white rounded-lg font-medium hover:bg-slate-800 transition-colors text-sm text-center">
-                                <i class="fas fa-play mr-2"></i> Tutorial
-                            </button>
-                            <button class="flex-1 py-3 px-4 border border-slate-200 text-slate-700 rounded-lg font-medium hover:bg-slate-50 transition-colors text-sm text-center">
-                                <i class="fas fa-file-pdf mr-2"></i> Guía PDF
-                            </button>
-                        </div>
-                    </article>
-
-                    <!-- Card 2 -->
-                    <article class="glass-card rounded-2xl p-8 h-full flex flex-col group">
-                        <div class="w-14 h-14 bg-green-50 text-green-600 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
-                            <i class="fas fa-cloud-download-alt"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-slate-900 mb-3">Respaldo de Información</h3>
-                        <p class="text-slate-600 mb-8 flex-grow leading-relaxed">
-                            Procedimiento para generar un archivo de copia de seguridad (.mbz) de tus cursos y descargarlo para su almacenamiento en tu equipo local o nube personal.
-                        </p>
-                        <div class="flex gap-3">
-                            <button class="flex-1 py-3 px-4 bg-slate-900 text-white rounded-lg font-medium hover:bg-slate-800 transition-colors text-sm text-center">
-                                <i class="fas fa-play mr-2"></i> Tutorial
-                            </button>
-                            <button class="flex-1 py-3 px-4 border border-slate-200 text-slate-700 rounded-lg font-medium hover:bg-slate-50 transition-colors text-sm text-center">
-                                <i class="fas fa-file-pdf mr-2"></i> Guía PDF
-                            </button>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
 
         <!-- 4. CRONOGRAMA (Diagrama) -->
-        <section id="cronograma" class="py-24 bg-white relative overflow-hidden">
+        <section id="cronograma" class="py-12 bg-white relative overflow-hidden">
             <!-- Decorative dots -->
             <div class="absolute right-0 top-1/4 w-64 h-64 bg-slate-50 rounded-full blur-3xl -z-10 opacity-50"></div>
 
             <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-16">
+                <div class="text-center mb-8">
                     <span class="text-ibero font-bold tracking-wider text-sm uppercase">Timeline</span>
                     <h2 class="text-3xl font-bold text-slate-900 mt-2">Etapas del Proceso</h2>
                 </div>
 
                 <div class="relative timeline-line py-4">
                     <!-- Semantic Ordered List for Timeline -->
-                    <ol class="space-y-16 relative z-10">
+                    <ol class="space-y-8 relative z-10">
 
                         <!-- Step 1 -->
                         <li class="relative flex md:flex-row flex-col-reverse group items-center md:justify-between w-full">
@@ -448,10 +394,65 @@
             </div>
         </section>
 
+        <!-- 3. RECURSOS (Grid) -->
+        <section id="recursos" class="py-12 bg-slate-50 border-y border-slate-200">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-8 gap-6">
+                    <div class="max-w-2xl">
+                        <h2 class="text-3xl font-bold text-slate-900 mb-4">Recursos de Apoyo</h2>
+                        <p class="text-slate-600 text-lg">Guías paso a paso para identificar y respaldar tu información de manera segura.</p>
+                    </div>
+                    <a href="https://moodle.iberoleon.mx" target="_blank" class="inline-flex items-center font-semibold text-ibero hover:text-ibero-dark transition-colors">
+                        Ir a Moodle <i class="fas fa-external-link-alt ml-2 text-sm"></i>
+                    </a>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Card 1 -->
+                    <article class="glass-card rounded-2xl p-8 h-full flex flex-col group">
+                        <div class="w-14 h-14 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center text-2xl mb-3 group-hover:scale-110 transition-transform">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Identificación de Cursos</h3>
+                        <p class="text-slate-600 mb-4 flex-grow leading-relaxed">
+                            Aprende a filtrar tus entornos virtuales en el tablero de Moodle para identificar con certeza cuáles corresponden a periodos anteriores a 2024.
+                        </p>
+                        <div class="flex gap-3">
+                            <button class="flex-1 py-3 px-4 bg-slate-900 text-white rounded-lg font-medium hover:bg-slate-800 transition-colors text-sm text-center">
+                                <i class="fas fa-play mr-2"></i> Tutorial
+                            </button>
+                            <button class="flex-1 py-3 px-4 border border-slate-200 text-slate-700 rounded-lg font-medium hover:bg-slate-50 transition-colors text-sm text-center">
+                                <i class="fas fa-file-pdf mr-2"></i> Guía PDF
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Card 2 -->
+                    <article class="glass-card rounded-2xl p-8 h-full flex flex-col group">
+                        <div class="w-14 h-14 bg-green-50 text-green-600 rounded-2xl flex items-center justify-center text-2xl mb-3 group-hover:scale-110 transition-transform">
+                            <i class="fas fa-cloud-download-alt"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Respaldo de Información</h3>
+                        <p class="text-slate-600 mb-4 flex-grow leading-relaxed">
+                            Procedimiento para generar un archivo de copia de seguridad (.mbz) de tus cursos y descargarlo para su almacenamiento en tu equipo local o nube personal.
+                        </p>
+                        <div class="flex gap-3">
+                            <button class="flex-1 py-3 px-4 bg-slate-900 text-white rounded-lg font-medium hover:bg-slate-800 transition-colors text-sm text-center">
+                                <i class="fas fa-play mr-2"></i> Tutorial
+                            </button>
+                            <button class="flex-1 py-3 px-4 border border-slate-200 text-slate-700 rounded-lg font-medium hover:bg-slate-50 transition-colors text-sm text-center">
+                                <i class="fas fa-file-pdf mr-2"></i> Guía PDF
+                            </button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
         <!-- 5. FAQ -->
-        <section id="faq" class="py-24 bg-slate-50">
+        <section id="faq" class="py-12 bg-slate-50">
             <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-16">
+                <div class="text-center mb-8">
                     <h2 class="text-3xl font-bold text-slate-900">Preguntas Frecuentes</h2>
                 </div>
 
@@ -484,15 +485,15 @@
     </main>
 
     <!-- FOOTER -->
-    <footer id="soporte" class="bg-slate-900 text-white pt-20 pb-10">
+    <footer id="soporte" class="bg-slate-900 text-white pt-10 pb-5">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
 
-            <div class="inline-block p-4 rounded-full bg-white/5 mb-6">
+            <div class="inline-block p-4 rounded-full bg-white/5 mb-3">
                 <i class="fas fa-life-ring text-3xl text-ibero-light"></i>
             </div>
 
-            <h3 class="text-2xl font-bold mb-4">¿Necesitas soporte técnico?</h3>
-            <p class="text-slate-400 mb-10 max-w-lg mx-auto leading-relaxed">
+            <h3 class="text-2xl font-bold mb-2">¿Necesitas soporte técnico?</h3>
+            <p class="text-slate-400 mb-5 max-w-lg mx-auto leading-relaxed">
                 Si encuentras dificultades al descargar tus archivos o tienes dudas sobre el proceso, estamos para ayudarte.
             </p>
 
@@ -500,7 +501,7 @@
                 Contactar Soporte
             </a>
 
-            <div class="border-t border-slate-800 pt-10 mt-16 flex flex-col items-center">
+            <div class="border-t border-slate-800 pt-10 mt-8 flex flex-col items-center">
                 <div class="flex items-center gap-2 mb-4 opacity-50 grayscale hover:grayscale-0 transition-all">
                     <!-- Placeholder Logo Footer -->
                     <div class="w-6 h-6 bg-white text-slate-900 text-xs font-bold flex items-center justify-center rounded">I</div>
