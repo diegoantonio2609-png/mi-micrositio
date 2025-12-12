@@ -477,25 +477,50 @@
                 <!-- Accordion Wrapper -->
                 <div class="space-y-4" x-data="{ active: null }">
 
-                    <template x-for="(item, index) in [
-                        { q: '¿En qué consiste la campaña?', a: 'Es una iniciativa institucional orientada a la sostenibilidad de nuestros espacios digitales. El objetivo es liberar espacio de almacenamiento en la plataforma Moodle mediante la eliminación de entornos virtuales de ciclos anteriores.' },
-                        { q: '¿Por qué es necesario eliminar cursos antiguos?', a: 'Los recursos de almacenamiento son finitos. Esta depuración responde a la necesidad de gestionar responsablemente la capacidad de alojamiento, asegurando así la disponibilidad de espacio para los nuevos periodos académicos.' },
-                        { q: '¿A quién aplica esta medida?', a: 'La campaña está dirigida exclusivamente al nivel de Licenciatura en su modalidad Presencial.' },
-                        { q: '¿Qué cursos permanecerán?', a: 'Se conservarán únicamente los entornos del año en curso y los dos años inmediatos anteriores completos.' },
-                        { q: '¿Qué pasará con mi información si no respaldo?', a: 'La información será eliminada permanentemente. No existe opción de recuperación posterior al borrado técnico.' }
-                    ]">
-                        <div class="glass-card rounded-xl overflow-hidden">
-                            <button @click="active = (active === index ? null : index)" class="w-full text-left px-6 py-5 focus:outline-none flex justify-between items-center hover:bg-slate-50 transition-colors">
-                                <span class="font-bold text-slate-800 text-sm md:text-base" x-text="item.q"></span>
-                                <span class="ml-4 flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-slate-100 text-slate-400 transition-all duration-300" :class="active === index ? 'bg-ibero text-white rotate-180' : ''">
-                                    <i class="fas fa-chevron-down text-xs"></i>
-                                </span>
-                            </button>
-                            <div x-show="active === index" x-collapse>
-                                <div class="px-6 pb-6 text-slate-600 text-sm leading-relaxed border-t border-slate-50 pt-4" x-text="item.a"></div>
+                    <!-- ITEM 1 -->
+                    <div class="glass-card rounded-xl overflow-hidden">
+                        <button @click="active = (active === 1 ? null : 1)" class="w-full text-left px-6 py-5 focus:outline-none flex justify-between items-center hover:bg-slate-50 transition-colors">
+                            <span class="font-bold text-slate-800 text-sm md:text-base">1. Sobre la Campaña y sus Motivos</span>
+                            <span class="ml-4 flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-slate-100 text-slate-400 transition-all duration-300" :class="active === 1 ? 'bg-ibero text-white rotate-180' : ''">
+                                <i class="fas fa-chevron-down text-xs"></i>
+                            </span>
+                        </button>
+                        <div x-show="active === 1" x-collapse>
+                            <div class="px-6 pb-6 text-slate-600 text-sm leading-relaxed border-t border-slate-50 pt-4">
+                                <strong>¿En qué consiste la campaña?</strong> Es una iniciativa institucional de carácter anual orientada a la sostenibilidad de nuestros espacios digitales. El objetivo es liberar espacio de almacenamiento en la plataforma Moodle mediante la eliminación de entornos virtuales de ciclos anteriores para dar soporte a la operación académica actual.<br><br><strong>¿Por qué es necesario eliminar cursos antiguos?</strong> Los recursos de almacenamiento son finitos. Esta depuración responde a la necesidad de gestionar responsablemente la capacidad de alojamiento, asegurando así la disponibilidad de espacio para los nuevos periodos académicos.<br><br><strong>¿A quién aplica esta medida?</strong> La campaña está dirigida exclusivamente al nivel de Licenciatura en su modalidad Presencial.
                             </div>
                         </div>
-                    </template>
+                    </div>
+
+                    <!-- ITEM 2 -->
+                    <div class="glass-card rounded-xl overflow-hidden">
+                        <button @click="active = (active === 2 ? null : 2)" class="w-full text-left px-6 py-5 focus:outline-none flex justify-between items-center hover:bg-slate-50 transition-colors">
+                            <span class="font-bold text-slate-800 text-sm md:text-base">2. Criterios de Conservación y Fechas</span>
+                            <span class="ml-4 flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-slate-100 text-slate-400 transition-all duration-300" :class="active === 2 ? 'bg-ibero text-white rotate-180' : ''">
+                                <i class="fas fa-chevron-down text-xs"></i>
+                            </span>
+                        </button>
+                        <div x-show="active === 2" x-collapse>
+                            <div class="px-6 pb-6 text-slate-600 text-sm leading-relaxed border-t border-slate-50 pt-4">
+                                <strong>¿Qué cursos permanecerán en la plataforma?</strong> Se conservarán únicamente los entornos del año en curso y los dos años anteriores completos. Se conservan: <strong>Entornos de 2024, 2025 y 2026</strong>.<br><br><strong>¿Qué cursos serán eliminados?</strong> Se depurarán todos los entornos virtuales creados en el año 2023 y anteriores.<br><br><strong>¿Cuándo se realizará la eliminación?</strong> La ejecución técnica de la depuración será el 13 de mayo de 2026.<br><br><strong>¿Hasta cuándo tengo tiempo para respaldar mi información?</strong> El periodo habilitado para la gestión de archivos históricos es del 13 de enero al 12 de mayo de 2026. Recomendamos realizar el respaldo antes de la fecha de corte.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ITEM 3 -->
+                    <div class="glass-card rounded-xl overflow-hidden">
+                        <button @click="active = (active === 3 ? null : 3)" class="w-full text-left px-6 py-5 focus:outline-none flex justify-between items-center hover:bg-slate-50 transition-colors">
+                            <span class="font-bold text-slate-800 text-sm md:text-base">3. Respaldo y Recuperación</span>
+                            <span class="ml-4 flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-slate-100 text-slate-400 transition-all duration-300" :class="active === 3 ? 'bg-ibero text-white rotate-180' : ''">
+                                <i class="fas fa-chevron-down text-xs"></i>
+                            </span>
+                        </button>
+                        <div x-show="active === 3" x-collapse>
+                            <div class="px-6 pb-6 text-slate-600 text-sm leading-relaxed border-t border-slate-50 pt-4">
+                                <strong>¿La universidad realizará un respaldo automático de mis cursos antiguos?</strong> No. Es responsabilidad exclusiva de cada profesor y profesora descargar y resguardar los materiales, recursos y datos que desee conservar en su archivo personal.<br><br><strong>¿Cómo puedo descargar mis materiales?</strong> Para facilitar esta tarea, la institución ha generado tutoriales paso a paso que te permitirán realizar el respaldo. Si aun continuas con dudas soporte técnico de aprendizaje digital (CAD) podrá guiarte en el proceso de identificación y descarga.<br><br><strong>Si olvido respaldar, ¿puedo recuperar la información de mis entornos?</strong> No. El proceso implica una eliminación definitiva de los entornos. Una vez ejecutada la acción técnica, la recuperación de la información no será posible.
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
             </div>
