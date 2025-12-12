@@ -205,53 +205,66 @@
 
     <main>
         <!-- 1. HERO SECTION -->
-        <section class="relative pt-16 pb-10 lg:pt-24 lg:pb-16 overflow-hidden">
-            <!-- Background Elements -->
-            <div class="absolute top-0 inset-x-0 h-full bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-slate-100 via-white to-white -z-10"></div>
-            <div class="absolute top-20 right-0 w-[500px] h-[500px] bg-ibero/5 rounded-full blur-3xl -z-10 animate-float"></div>
-            <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-slate-200/40 rounded-full blur-3xl -z-10"></div>
+        <section class="relative pt-16 pb-10 lg:pt-24 lg:pb-16 overflow-hidden" style="background-color: #E8E4DC;">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <!-- Left Column -->
+                    <div class="text-left">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-50 text-ibero text-xs font-bold uppercase tracking-wide mb-4 border border-red-100">
+                            <span class="w-2 h-2 rounded-full bg-ibero animate-pulse"></span>
+                            Ciclo 2026
+                        </div>
 
-            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-50 text-ibero text-xs font-bold uppercase tracking-wide mb-4 border border-red-100">
-                    <span class="w-2 h-2 rounded-full bg-ibero animate-pulse"></span>
-                    Ciclo 2026
+                        <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-slate-900 leading-tight mb-6 tracking-tight text-balance">
+                            Campaña de Depuración de <span class="text-ibero">Entornos Virtuales</span>
+                        </h1>
+
+                        <div class="flex flex-col sm:flex-row items-start gap-4 mb-8">
+                            <a href="#recursos" class="w-full sm:w-auto px-8 py-4 bg-ibero text-white font-semibold rounded-full hover:bg-ibero-dark transition-all transform hover:-translate-y-1 shadow-lg shadow-ibero/25 flex items-center justify-center gap-2">
+                                Ver Guías de Respaldo <i class="fas fa-arrow-right text-sm"></i>
+                            </a>
+                            <a href="#criterios" class="w-full sm:w-auto px-8 py-4 bg-white text-slate-700 border border-slate-200 font-medium rounded-full hover:bg-slate-50 transition-all hover:border-slate-300 flex items-center justify-center gap-2">
+                                Consultar Criterios
+                            </a>
+                        </div>
+
+                        <!-- Info Banner -->
+                        <div class="inline-flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-8 bg-white/80 backdrop-blur border border-slate-200 rounded-2xl p-6 shadow-soft">
+                            <div class="flex items-center gap-3">
+                                <div class="p-2 bg-red-50 rounded-lg text-ibero"><i class="far fa-calendar-check text-xl"></i></div>
+                                <div class="text-left">
+                                    <p class="text-xs text-slate-500 uppercase font-semibold">Fecha Límite</p>
+                                    <p class="text-slate-900 font-bold">12 de mayo de 2026</p>
+                                </div>
+                            </div>
+                            <div class="hidden sm:block w-px h-10 bg-slate-200"></div>
+                            <div class="flex items-center gap-3">
+                                <div class="p-2 bg-blue-50 rounded-lg text-blue-600"><i class="far fa-user text-xl"></i></div>
+                                <div class="text-left">
+                                    <p class="text-xs text-slate-500 uppercase font-semibold">Alcance</p>
+                                    <p class="text-slate-900 font-bold">Licenciatura Presencial</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column -->
+                    <div class="relative">
+                        <div class="rounded-[16px] overflow-hidden shadow-lg">
+                            <img src="https://plus.unsplash.com/premium_photo-1667511200233-cad0cf8d1a07?q=80&w=1470&auto=format&fit=crop" alt="Estudiantes Ibero" class="w-full h-auto object-cover">
+                        </div>
+                    </div>
                 </div>
+            </div>
+        </section>
 
-                <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-slate-900 leading-tight mb-3 tracking-tight text-balance">
-                    Campaña de Depuración de <span class="text-ibero">Entornos Virtuales</span>
-                </h1>
-
-                <p class="text-lg sm:text-xl text-slate-600 mb-5 max-w-2xl mx-auto leading-relaxed text-balance font-light">
-                    Optimizamos la capacidad de alojamiento de las aulas virtuales. Resguarda tu archivo personal para una plataforma sostenible.
+        <!-- New Section -->
+        <section class="py-16 md:py-24 bg-white">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 mb-6">Para un espacio de aprendizaje óptimo</h2>
+                <p class="text-lg text-slate-600 leading-relaxed">
+                    En la IBERO León, promovemos el cuidado y sostenibilidad de nuestros espacios digitales compartidos. En congruencia con esta visión, implementamos la Campaña de Depuración de Entornos Virtuales, un proceso estratégico orientado a optimizar los recursos de almacenamiento de nuestra plataforma educativa.
                 </p>
-
-                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
-                    <a href="#recursos" class="w-full sm:w-auto px-8 py-4 bg-ibero text-white font-semibold rounded-full hover:bg-ibero-dark transition-all transform hover:-translate-y-1 shadow-lg shadow-ibero/25 flex items-center justify-center gap-2">
-                        Ver Guías de Respaldo <i class="fas fa-arrow-right text-sm"></i>
-                    </a>
-                    <a href="#criterios" class="w-full sm:w-auto px-8 py-4 bg-white text-slate-700 border border-slate-200 font-medium rounded-full hover:bg-slate-50 transition-all hover:border-slate-300 flex items-center justify-center gap-2">
-                        Consultar Criterios
-                    </a>
-                </div>
-
-                <!-- Info Banner -->
-                <div class="max-w-2xl mx-auto bg-white/80 backdrop-blur border border-slate-200 rounded-2xl p-6 shadow-soft flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8">
-                    <div class="flex items-center gap-3">
-                        <div class="p-2 bg-red-50 rounded-lg text-ibero"><i class="far fa-calendar-check text-xl"></i></div>
-                        <div class="text-left">
-                            <p class="text-xs text-slate-500 uppercase font-semibold">Fecha Límite</p>
-                            <p class="text-slate-900 font-bold">12 de mayo de 2026</p>
-                        </div>
-                    </div>
-                    <div class="hidden sm:block w-px h-10 bg-slate-200"></div>
-                    <div class="flex items-center gap-3">
-                        <div class="p-2 bg-blue-50 rounded-lg text-blue-600"><i class="far fa-user text-xl"></i></div>
-                        <div class="text-left">
-                            <p class="text-xs text-slate-500 uppercase font-semibold">Alcance</p>
-                            <p class="text-slate-900 font-bold">Licenciatura Presencial</p>
-                        </div>
-                    </div>
-                </div>
             </div>
         </section>
 
