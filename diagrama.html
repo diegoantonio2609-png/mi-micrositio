@@ -16,6 +16,8 @@
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
+    <!-- Alpine.js Plugins -->
+    <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
     <!-- Alpine.js -->
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
@@ -248,10 +250,17 @@
                         </div>
                     </div>
 
-                    <!-- Right Column -->
+                    <!-- Right Column (VIDEO REPLACEMENT) -->
                     <div class="relative">
-                        <div class="rounded-[16px] overflow-hidden shadow-lg">
-                            <img src="https://plus.unsplash.com/premium_photo-1667511200233-cad0cf8d1a07?q=80&w=1470&auto=format&fit=crop" alt="Estudiantes Ibero" class="w-full h-auto object-cover">
+                        <div class="rounded-[16px] overflow-hidden shadow-lg w-full aspect-video bg-black">
+                            <iframe
+                                class="w-full h-full object-cover"
+                                src="https://www.youtube.com/embed/BEinc5HU3X0"
+                                title="Video de Campaña"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen>
+                            </iframe>
                         </div>
                     </div>
                 </div>
@@ -338,44 +347,59 @@
             </div>
         </section>
 
-        <!-- 4. DINÁMICA DE DEPURACIÓN (Zig-Zag) -->
+        <!-- 4. DINÁMICA DE DEPURACIÓN (Zig-Zag) - REFINED -->
         <section id="dinamica" class="py-24 bg-white overflow-hidden">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+
+                <!-- Title Section -->
+                <div class="text-center mb-20 relative z-10">
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900">Dinámica de la Campaña Ciclo 2026</h2>
+                </div>
+
+                <!-- Vertical Line (Desktop only) -->
+                <div class="hidden md:block absolute left-1/2 top-32 bottom-20 w-0 border-l-2 border-dashed border-slate-200 -translate-x-1/2 z-0"></div>
+
                  <!-- Row 1 -->
-                 <div class="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-24 mb-24 md:mb-32">
+                 <div x-data="{ shown: false }" x-intersect.threshold.0.5="shown = true"
+                      :class="shown ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'"
+                      class="transition-all duration-1000 ease-out flex flex-col md:flex-row items-center justify-center gap-8 md:gap-24 mb-24 relative z-10">
                      <!-- Number -->
                      <div class="md:w-1/3 text-center md:text-right">
-                          <span class="block text-[8rem] sm:text-[10rem] font-black text-ibero leading-none tracking-tighter opacity-90" style="font-family: 'Inter', sans-serif;">01</span>
+                          <span class="block text-[5rem] font-black text-ibero leading-none tracking-tighter opacity-90" style="font-family: 'Inter', sans-serif;">01</span>
                      </div>
                      <!-- Text -->
                      <div class="md:w-1/3 text-center md:text-left">
-                          <h3 class="text-3xl font-bold text-slate-900 mb-4">Vigencia Activa</h3>
+                          <h3 class="text-2xl font-bold text-slate-900 mb-3">Vigencia Activa</h3>
                           <p class="text-lg text-slate-600 leading-relaxed">La campaña de depuración se mantiene activa durante todo el ciclo 2026.</p>
                      </div>
                  </div>
 
                  <!-- Row 2 -->
-                 <div class="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-24 mb-24 md:mb-32">
+                 <div x-data="{ shown: false }" x-intersect.threshold.0.5="shown = true"
+                      :class="shown ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'"
+                      class="transition-all duration-1000 delay-300 ease-out flex flex-col md:flex-row items-center justify-center gap-8 md:gap-24 mb-24 relative z-10">
                      <!-- Text (Desktop Left) -->
                      <div class="md:w-1/3 text-center md:text-right order-2 md:order-1">
-                          <h3 class="text-3xl font-bold text-slate-900 mb-4">Tu Momento para Respaldar</h3>
+                          <h3 class="text-2xl font-bold text-slate-900 mb-3">Tu Momento para Respaldar</h3>
                           <p class="text-lg text-slate-600 leading-relaxed">Durante este periodo, cuentas con la facilidad para revisar y descargar todos tus materiales históricos.</p>
                      </div>
                      <!-- Number (Desktop Right) -->
                      <div class="md:w-1/3 text-center md:text-left order-1 md:order-2">
-                          <span class="block text-[8rem] sm:text-[10rem] font-black text-ibero leading-none tracking-tighter opacity-90" style="font-family: 'Inter', sans-serif;">02</span>
+                          <span class="block text-[5rem] font-black text-ibero leading-none tracking-tighter opacity-90" style="font-family: 'Inter', sans-serif;">02</span>
                      </div>
                  </div>
 
                  <!-- Row 3 -->
-                 <div class="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-24">
+                 <div x-data="{ shown: false }" x-intersect.threshold.0.5="shown = true"
+                      :class="shown ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'"
+                      class="transition-all duration-1000 delay-500 ease-out flex flex-col md:flex-row items-center justify-center gap-8 md:gap-24 relative z-10">
                      <!-- Number -->
                      <div class="md:w-1/3 text-center md:text-right">
-                          <span class="block text-[8rem] sm:text-[10rem] font-black text-ibero leading-none tracking-tighter opacity-90" style="font-family: 'Inter', sans-serif;">03</span>
+                          <span class="block text-[5rem] font-black text-ibero leading-none tracking-tighter opacity-90" style="font-family: 'Inter', sans-serif;">03</span>
                      </div>
                      <!-- Text -->
                      <div class="md:w-1/3 text-center md:text-left">
-                          <h3 class="text-3xl font-bold text-slate-900 mb-4">Cierre del Ciclo</h3>
+                          <h3 class="text-2xl font-bold text-slate-900 mb-3">Cierre del Ciclo</h3>
                           <p class="text-lg text-slate-600 leading-relaxed">El borrado es total. Una vez ejecutada la acción técnica, la información no podrá recuperarse.</p>
                      </div>
                  </div>
