@@ -134,7 +134,7 @@
         }
 
         /* Scroll Offset for fixed header */
-        #criterios, #recursos, #cronograma, #faq, #soporte {
+        #criterios, #recursos, #dinamica, #faq, #soporte {
             scroll-margin-top: 100px;
         }
 
@@ -172,7 +172,7 @@
                 <!-- Desktop Menu -->
                 <nav class="hidden md:flex space-x-1 items-center">
                     <a href="#criterios" class="px-4 py-2 text-sm font-medium text-slate-600 hover:text-ibero rounded-full hover:bg-slate-50 transition-all">Criterios</a>
-                    <a href="#cronograma" class="px-4 py-2 text-sm font-medium text-slate-600 hover:text-ibero rounded-full hover:bg-slate-50 transition-all">Cronograma</a>
+                    <a href="#dinamica" class="px-4 py-2 text-sm font-medium text-slate-600 hover:text-ibero rounded-full hover:bg-slate-50 transition-all">Dinámica</a>
                     <a href="#recursos" class="px-4 py-2 text-sm font-medium text-slate-600 hover:text-ibero rounded-full hover:bg-slate-50 transition-all">Recursos</a>
                     <a href="#faq" class="px-4 py-2 text-sm font-medium text-slate-600 hover:text-ibero rounded-full hover:bg-slate-50 transition-all">Preguntas</a>
                     <a href="#soporte" class="ml-4 px-5 py-2.5 bg-slate-900 text-white text-sm font-medium rounded-full hover:bg-slate-800 transition-all shadow-lg shadow-slate-200">Soporte</a>
@@ -196,7 +196,7 @@
              class="md:hidden bg-white/95 backdrop-blur-md border-t border-slate-100 absolute w-full shadow-lg">
             <nav class="px-4 pt-2 pb-6 space-y-1">
                 <a href="#criterios" @click="mobileMenuOpen = false" class="block px-4 py-3 rounded-lg text-base font-medium text-slate-700 hover:text-ibero hover:bg-slate-50">Criterios</a>
-                <a href="#cronograma" @click="mobileMenuOpen = false" class="block px-4 py-3 rounded-lg text-base font-medium text-slate-700 hover:text-ibero hover:bg-slate-50">Cronograma</a>
+                <a href="#dinamica" @click="mobileMenuOpen = false" class="block px-4 py-3 rounded-lg text-base font-medium text-slate-700 hover:text-ibero hover:bg-slate-50">Dinámica</a>
                 <a href="#recursos" @click="mobileMenuOpen = false" class="block px-4 py-3 rounded-lg text-base font-medium text-slate-700 hover:text-ibero hover:bg-slate-50">Recursos</a>
                 <a href="#faq" @click="mobileMenuOpen = false" class="block px-4 py-3 rounded-lg text-base font-medium text-slate-700 hover:text-ibero hover:bg-slate-50">Preguntas Frecuentes</a>
             </nav>
@@ -338,79 +338,47 @@
             </div>
         </section>
 
-        <!-- 4. CRONOGRAMA (Diagrama) -->
-        <section id="cronograma" class="py-12 bg-white relative overflow-hidden">
-            <!-- Decorative dots -->
-            <div class="absolute right-0 top-1/4 w-64 h-64 bg-slate-50 rounded-full blur-3xl -z-10 opacity-50"></div>
+        <!-- 4. DINÁMICA DE DEPURACIÓN (Zig-Zag) -->
+        <section id="dinamica" class="py-24 bg-white overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                 <!-- Row 1 -->
+                 <div class="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-24 mb-24 md:mb-32">
+                     <!-- Number -->
+                     <div class="md:w-1/3 text-center md:text-right">
+                          <span class="block text-[8rem] sm:text-[10rem] font-black text-ibero leading-none tracking-tighter opacity-90" style="font-family: 'Inter', sans-serif;">01</span>
+                     </div>
+                     <!-- Text -->
+                     <div class="md:w-1/3 text-center md:text-left">
+                          <h3 class="text-3xl font-bold text-slate-900 mb-4">Vigencia Activa</h3>
+                          <p class="text-lg text-slate-600 leading-relaxed">La campaña de depuración se mantiene activa durante todo el ciclo 2026.</p>
+                     </div>
+                 </div>
 
-            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-8">
-                    <span class="text-ibero font-bold tracking-wider text-sm uppercase">Cronograma</span>
-                    <h2 class="text-3xl font-bold text-slate-900 mt-2">Etapas del Proceso</h2>
-                </div>
+                 <!-- Row 2 -->
+                 <div class="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-24 mb-24 md:mb-32">
+                     <!-- Text (Desktop Left) -->
+                     <div class="md:w-1/3 text-center md:text-right order-2 md:order-1">
+                          <h3 class="text-3xl font-bold text-slate-900 mb-4">Tu Momento para Respaldar</h3>
+                          <p class="text-lg text-slate-600 leading-relaxed">Durante este periodo, cuentas con la facilidad para revisar y descargar todos tus materiales históricos.</p>
+                     </div>
+                     <!-- Number (Desktop Right) -->
+                     <div class="md:w-1/3 text-center md:text-left order-1 md:order-2">
+                          <span class="block text-[8rem] sm:text-[10rem] font-black text-ibero leading-none tracking-tighter opacity-90" style="font-family: 'Inter', sans-serif;">02</span>
+                     </div>
+                 </div>
 
-                <div class="relative timeline-line py-4">
-                    <!-- Semantic Ordered List for Timeline -->
-                    <ol class="space-y-8 relative z-10">
-
-                        <!-- Step 1 -->
-                        <li class="relative flex md:flex-row flex-col-reverse group items-center md:justify-between w-full">
-                            <div class="md:w-[45%] w-full md:text-right p-4 md:pr-8 bg-white md:bg-transparent rounded-lg z-10">
-                                <time class="block text-sm font-bold text-slate-400 uppercase tracking-wide mb-1">13 de Enero</time>
-                                <h4 class="text-xl font-bold text-slate-900">Inicio del Periodo</h4>
-                                <p class="text-slate-600 mt-2 text-sm leading-relaxed">Apertura oficial de la campaña. Habilitación de tutoriales y guías de soporte para la descarga.</p>
-                            </div>
-
-                            <!-- Marker -->
-                            <div class="timeline-marker shadow-sm"></div>
-
-                            <div class="md:w-[45%] w-full"></div>
-                        </li>
-
-                        <!-- Step 2 -->
-                        <li class="relative flex md:flex-row flex-col group items-center md:justify-between w-full">
-                            <div class="md:w-[45%] w-full"></div>
-
-                            <!-- Marker -->
-                            <div class="timeline-marker bg-ibero border-white !border-4"></div>
-
-                            <div class="md:w-[45%] w-full p-4 md:pl-8 bg-white md:bg-transparent rounded-lg z-10">
-                                <time class="block text-sm font-bold text-ibero uppercase tracking-wide mb-1">Enero - Mayo</time>
-                                <h4 class="text-xl font-bold text-ibero">Ventana de Gestión</h4>
-                                <p class="text-slate-600 mt-2 text-sm leading-relaxed">Periodo activo de 4 meses para revisar, seleccionar y descargar contenidos históricos.</p>
-                            </div>
-                        </li>
-
-                        <!-- Step 3 -->
-                        <li class="relative flex md:flex-row flex-col-reverse group items-center md:justify-between w-full">
-                            <div class="md:w-[45%] w-full md:text-right p-4 md:pr-8 bg-white md:bg-transparent rounded-lg z-10">
-                                <time class="block text-sm font-bold text-amber-500 uppercase tracking-wide mb-1">12 de Mayo</time>
-                                <h4 class="text-xl font-bold text-slate-900">Fecha Límite</h4>
-                                <p class="text-slate-600 mt-2 text-sm leading-relaxed">Último día para realizar descargas. Recomendamos no esperar hasta este momento.</p>
-                            </div>
-
-                            <!-- Marker -->
-                            <div class="timeline-marker border-amber-400"></div>
-
-                            <div class="md:w-[45%] w-full"></div>
-                        </li>
-
-                        <!-- Step 4 -->
-                        <li class="relative flex md:flex-row flex-col group items-center md:justify-between w-full">
-                            <div class="md:w-[45%] w-full"></div>
-
-                            <!-- Marker -->
-                            <div class="timeline-marker !bg-slate-900 !border-slate-900"></div>
-
-                            <div class="md:w-[45%] w-full p-4 md:pl-8 bg-white md:bg-transparent rounded-lg z-10">
-                                <time class="block text-sm font-bold text-slate-900 uppercase tracking-wide mb-1">13 de Mayo</time>
-                                <h4 class="text-xl font-bold text-slate-900">Ejecución Técnica</h4>
-                                <p class="text-slate-500 mt-2 text-sm leading-relaxed">Inicio de la depuración de entornos 2023 y de antigüedad mayor. <span class="text-red-500 font-medium">Proceso irreversible.</span></p>
-                            </div>
-                        </li>
-
-                    </ol>
-                </div>
+                 <!-- Row 3 -->
+                 <div class="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-24">
+                     <!-- Number -->
+                     <div class="md:w-1/3 text-center md:text-right">
+                          <span class="block text-[8rem] sm:text-[10rem] font-black text-ibero leading-none tracking-tighter opacity-90" style="font-family: 'Inter', sans-serif;">03</span>
+                     </div>
+                     <!-- Text -->
+                     <div class="md:w-1/3 text-center md:text-left">
+                          <h3 class="text-3xl font-bold text-slate-900 mb-4">Cierre del Ciclo</h3>
+                          <p class="text-lg text-slate-600 leading-relaxed">El borrado es total. Una vez ejecutada la acción técnica, la información no podrá recuperarse.</p>
+                     </div>
+                 </div>
             </div>
         </section>
 
